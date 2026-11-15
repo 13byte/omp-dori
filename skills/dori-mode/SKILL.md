@@ -94,7 +94,8 @@ Real work runs in its own session, called a lane: a herdr tab, or a labelled ter
 - Destructive clicks (remove, delete, revoke, pay, submit) are bound to the exact target and done once. Never wrap them in a retry; on any error, stop and re-read the state.
 - A "done" is believed only after the live state is read back: the merge SHA, the closed issue, the published version.
 - A merged PR's worktree is deleted in the same turn its merge is read back.
-- Work that spends someone's subscription or money needs that person's go for that spend, and the go is revocable until the work starts.
+- Reset coupons and credits require the user's explicit permission for each specific use and amount. Never redeem a reset coupon, activate or spend additional credits, top up, or enable paid overage on your own. Existing balances, task urgency, instructions to finish and another agent's approval are not consent. Ask the user and wait; silence is not approval.
+- When the authorized provider token allowance, usage quota or credit budget is exhausted, STOP model work, preserve progress and report the limit. Wait for the user. Never automatically reset, redeem, top up, switch accounts/providers/models, or retry to evade that limit. This applies to every role and delegated agent, and overrides keep-working, recovery and nudge instructions. Ordinary context compaction is not a provider quota reset or spending permission.
 - Secrets, tokens, internal hostnames and personal data never go into a public issue, PR, gist or message.
 - Build memory as you work and consult it before asking the owner something it already answers.
 - Keep going until the work is done. Stop only when nothing can move without the owner.
